@@ -61,6 +61,22 @@ Evaluation focused on:
 * overall response quality
 
 Weights & Biases was used for experiment tracking and evaluation.
+## Results
+
+The system was evaluated on 8 healthcare insurance queries covering coverage, co-pays, authorization requirements, and service limits.
+
+| Metric                   | Multi-Agent RAG |
+| ------------------------ | --------------: |
+| Grounded Responses       |       7/8 (88%) |
+| No Hallucination         |       7/8 (88%) |
+| Responses with Citations |       7/8 (88%) |
+
+The multi-agent system successfully grounded 7 out of 8 responses in retrieved policy documents while providing source citations and avoiding unsupported claims.
+
+A single-agent baseline without RAG was also implemented for comparison. Unlike the multi-agent pipeline, the baseline generated responses without access to the policy knowledge base, demonstrating the importance of retrieval and verification for domain-specific insurance queries.
+
+Experiments and evaluation metrics were tracked using **Weights & Biases (W&B)**.
+
 
 ## Technologies
 
